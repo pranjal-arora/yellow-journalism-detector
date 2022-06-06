@@ -100,3 +100,4 @@ So as it is 2-d space so by just using a straight line, we can easily separate t
 Hence, the SVM algorithm helps to find the best line or decision boundary; this best boundary or region is called as a hyperplane. SVM algorithm finds the closest point of the lines from both the classes. These points are called support vectors. The distance between the vectors and the hyperplane is called as margin. And the goal of SVM is to maximize this margin. The hyperplane with maximum margin is called the optimal hyperplane.
 
 
+THIS PROJECT USES SUPPORT VECTOR MACHINE TYPE MACHINE LEARNING ALGORITHMS
