@@ -1,0 +1,102 @@
+MODEL
+ A Machine learning model is an expression of an algorithm that combs through mountains of data to find patterns or make predictions. Fueled by data, machine learning (ML) models are the mathematical engines of artificial intelligence
+
+MODEL-TRAINING
+1. gathering data ---> training data
+2. data preparation --->  80-20 divide in training and testing
+3. choosing a model ---> based on our problem
+4. training the data ---> the data is sent to the selected model, and weights and basis of the data is calculated. weights and basis are initialized with some random values at first and the model attempts to predict the outputs with these values, although very poorly. the, we compare the real value to the predicted value and update the [w,b] values accordingly for better accuracy. one such iteration is called 1 training step, so our model makes 50 training steps.
+5. evaluation ---> testing data is now sent to our model and predictions are made from that.
+6. parameter tuning ---> to improve the training of our model, and hence increase the accuracy, we can tune some parameters, called hyper-parameters like a) increasing the number of iterations, b) learning rate to shift the margin or the step size of the iterations
+7. predictions ---> this is where we get the answers to our new questions.
+
+SUPERVISED LEARNING AND UNSUPERVISED LEARNING
+Supervised and Unsupervised learning are the two techniques of machine learning. 
+Supervised learning is a machine learning method in which models are trained using labeled data. In supervised learning, models need to find the mapping function to map the input variable (X) with the output variable (Y).
+Supervised learning needs supervision to train the model. It can be used for two types of problems: Classification and Regression.
+In supervised learning, we will give the input data as well as output for that. Once the training is completed, we will test the model by giving the new set data. The model will identify the data and predict the output using a suitable algorithm.
+
+Unsupervised learning is another machine learning method in which patterns inferred from the unlabeled input data. The goal of unsupervised learning is to find the structure and patterns from the input data. Unsupervised learning does not need any supervision. Instead, it finds patterns from the data by its own.
+Unsupervised learning can be used for two types of problems: Clustering and Association.
+We will just provide the input dataset to the model and allow the model to find the patterns from the data. With the help of a suitable algorithm, the model will train itself and divide the data into different groups according to the most similar features between them.
+
+
+
+CLASSIFICATION V/S REGRESSION
+
+Regression
+Regression analysis is a statistical method to model the relationship between a dependent (target) and independent (predictor) variables with one or more independent variables.
+It is a supervised learning technique which helps in finding the correlation between variables and enables us to predict the continuous output variable(make a graph) based on the one or more predictor variables. It is mainly used for prediction, forecasting, time series modeling, and determining the causal-effect relationship between variables.
+In Regression, we plot a graph between the variables which best fits the given datapoints, using this plot, the machine learning model can make predictions about the data. In simple words, "Regression shows a line or curve that passes through all the datapoints on target-predictor graph in such a way that the vertical distance between the datapoints and the regression line is minimum." The distance between datapoints and line tells whether a model has captured a strong relationship or not.
+
+Types of regression
+1) Linear regression--it is a statistical regression method which is used for predictive analysis. If there is only one input variable (x), then such linear regression is called "simple linear regression". And if there is more than one input variable, then such linear regression is called "multiple linear regression".
+2) Logistic regression---It is another supervised learning algorithm which is used to solve the classification problems. In classification problems, we have dependent variables in a binary or discrete format such as 0 or 1. Logistic regression algorithm works with the categorical variable such as 0 or 1, Yes or No, True or False, Spam or not spam, etc. It is a predictive analysis algorithm which works on the concept of probability.Logistic regression uses sigmoid function or logistic function which is a complex cost function. This sigmoid function is used to model the data in logistic regression. The function can be represented by:
+ f(x)= 1/(1+(e^-x))
+ where, f(x)= Output between the 0 and 1 value, x= input to the function, e= base of natural logarithm.
+when we provide the input values (data) to the function, it gives the S-curve.
+It uses the concept of threshold levels, values above the threshold level are rounded up to 1, and values below the threshold level are rounded up to 0.
+There are three types of logistic regression:
+    a) Binary(0/1, pass/fail)
+    b) Multi(cats, dogs, lions)
+    c) Ordinal(low, medium, high)
+
+3) Polynomial Regression --It is a type of regression which models the non-linear dataset using a linear model.
+It is similar to multiple linear regression, but it fits a non-linear curve between the value of x and corresponding conditional values of y. In Polynomial regression, the original features are transformed into polynomial features of given degree and then modeled using a linear model. 
+
+4) and many more....
+
+Classification
+In Regression algorithms, we have predicted the output for continuous values, but to predict the categorical values, we need Classification algorithms.
+The Classification algorithm is a Supervised Learning technique that is used to identify the category of new observations on the basis of training data. 
+In Classification, a program learns from the given dataset or observations and then classifies new observation into a number of classes or groups. Such as, Yes or No, 0 or 1, Spam or Not Spam, cat or dog, etc. Classes can be called as targets/labels or categories.
+In classification algorithm, a discrete output function(y) is mapped to input variable(x).
+
+The algorithm which implements the classification on a dataset is known as a "classifier". There are two types of Classifications:
+a)Binary Classifier: If the classification problem has only two possible outcomes, then it is called as Binary Classifier.
+Examples: YES or NO, MALE or FEMALE, SPAM or NOT SPAM, CAT or DOG, etc.
+b)Multi-class Classifier: If a classification problem has more than two outcomes, then it is called as Multi-class Classifier.
+Example: Classifications of types of crops, Classification of types of music.
+
+Learners in Classification Problems:
+In the classification problems, there are two types of learners:
+-->Lazy Learners: Lazy Learner firstly stores the training dataset and wait until it receives the test dataset. In Lazy learner case, classification is done on the basis of the most related data stored in the training dataset. It takes less time in training but more time for predictions. Example: K-NN algorithm, Case-based reasoning
+-->Eager Learners:Eager Learners develop a classification model based on a training dataset before receiving a test dataset. Opposite to Lazy learners, Eager Learner takes more time in learning, and less time in prediction. Example: Decision Trees, Naïve Bayes, ANN.
+
+Types of ML Classification Algorithms:
+Classification Algorithms can be further divided into the Mainly two category:
+    Linear Models
+    -->Logistic Regression
+    -->Support Vector Machines
+    Non-linear Models
+    -->K-Nearest Neighbours
+    -->Kernel SVM
+    -->Naïve Bayes
+    -->Decision Tree Classification
+    -->Random Forest Classification
+
+Once our model is completed, it is necessary to evaluate its performance; either it is a Classification or Regression model. 
+we used, "Confusion Matrix/error matrix" for the same.
+The confusion matrix provides us a matrix/table as output and describes the performance of the model. The matrix consists of predictions result in a summarized form, which has a total number of correct predictions and incorrect predictions. 
+
+ALGORITHM IN OUR MODEL ---> linear SVM
+>>>>Logistic Regression is a significant machine learning algorithm because it has the ability to provide probabilities and classify new data using continuous and discrete datasets.
+
+Support Vector Machine or SVM is one of the most popular Supervised Learning algorithms, which is used for Classification as well as Regression problems. 
+The goal of the SVM algorithm is to create the best line or decision boundary that can segregate n-dimensional space into classes so that we can easily put the new data point in the correct category in the future. This best decision boundary is called a hyperplane.
+SVM chooses the extreme points/vectors that help in creating the hyperplane. These extreme cases are called as support vectors, and hence algorithm is termed as Support Vector Machine. 
+
+SVM can be of two types:
+    -->Linear SVM: Linear SVM is used for linearly separable data, which means if a dataset can be classified into two classes by using a single straight line, then such data is termed as linearly separable data, and classifier is used called as Linear SVM classifier.
+    --->Non-linear SVM: Non-Linear SVM is used for non-linearly separated data, which means if a dataset cannot be classified by using a straight line, then such data is termed as non-linear data and classifier used is called as Non-linear SVM classifier.
+
+Hyperplane: There can be multiple lines/decision boundaries to segregate the classes in n-dimensional space, but we need to find out the best decision boundary that helps to classify the data points. This best boundary is known as the hyperplane of SVM. The dimensions of the hyperplane depend on the features present in the dataset, which means if there are 2 features (as shown in image), then hyperplane will be a straight line. And if there are 3 features, then hyperplane will be a 2-dimension plane. ******We always create a hyperplane that has a maximum margin, which means the maximum distance between the data points.
+
+Support Vectors: The data points or vectors that are the closest to the hyperplane and which affect the position of the hyperplane are termed as Support Vector. Since these vectors support the hyperplane, hence called a Support vector.
+
+Linear SVM:
+The working of the SVM algorithm can be understood by using an example. Suppose we have a dataset that has two tags (green and blue), and the dataset has two features x1 and x2. We want a classifier that can classify the pair(x1, x2) of coordinates in either green or blue. 
+So as it is 2-d space so by just using a straight line, we can easily separate these two classes. But there can be multiple lines that can separate these classes.
+Hence, the SVM algorithm helps to find the best line or decision boundary; this best boundary or region is called as a hyperplane. SVM algorithm finds the closest point of the lines from both the classes. These points are called support vectors. The distance between the vectors and the hyperplane is called as margin. And the goal of SVM is to maximize this margin. The hyperplane with maximum margin is called the optimal hyperplane.
+
+
